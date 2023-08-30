@@ -1,0 +1,10 @@
+.procressbar {
+  z-index: 5;
+  
+  &-timeline {
+    height: 45vh;
+    width: 10px;
+    border: 2px solid $primary;
+    border-left: none;
+  }
+}

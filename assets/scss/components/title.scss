@@ -1,0 +1,29 @@
+.title-sm {
+  h2 {
+    padding: 0 $spacer * 4;
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -20%;
+      z-index: -1;
+      width: 100%;
+      height: 65%;
+      background-color: $primary;
+      border-radius: $spacer * 10;
+    }
+  }
+  &-dark {
+    h2::after {
+      opacity: .2;
+    }
+  }
+
+  &-light {
+    h2::after {
+      opacity: .6;
+    }
+  }
+}

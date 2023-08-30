@@ -1,0 +1,109 @@
+// ------ font ------ //
+// font-family
+.font-en-serif {
+  font-family: $font-en-serif;
+}
+
+.font-en-sans {
+  font-family: $font-en-sans;
+}
+
+.font-en-hand {
+  font-family: $font-en-hand;
+}
+
+.font-ch-serif {
+  font-family: $font-ch-serif;
+}
+
+.font-ch-sans {
+  font-family: $font-ch-sans;
+}
+
+// font-weight
+.fw-extraBold {
+  font-weight: $font-weight-extraBold;
+}
+
+// font-size
+@include media-breakpoint-up(xxl) {
+  .fs-xl-h1 {
+    font-size: $h1-font-size !important;
+  }
+
+  .fs-xl-h2 {
+    font-size: $h2-font-size !important;
+  }
+
+  .fs-xl-h3 {
+    font-size: $h3-font-size !important;
+  }
+
+  .fs-xl-h4 {
+    font-size: $h4-font-size !important;
+  }
+
+  .fs-xl-h5 {
+    font-size: $h5-font-size !important;
+  }
+
+  .fs-xl-h6 {
+    font-size: $h6-font-size !important;
+  }
+
+  .fs-xl-1 {
+    font-size: $n1-font-size !important;
+  }
+
+  .fs-xl-2 {
+    font-size: $n2-font-size !important;
+  }
+
+  .fs-xl-3 {
+    font-size: $n3-font-size !important;
+  }
+}
+
+// ------ shadow ------ //
+.text-shadow-dark {
+  text-shadow: 5px 5px 12px $customBlue-900;
+}
+
+// ------ background ------ //
+.bg-noise {
+  &-dark {
+    background-image: url(../images/background/bg-noise-dark.png);
+  }
+
+  &-light {
+    background-image: url(../images/background/bg-noise-light.png);
+  }
+
+  &-primary {
+    background-image: url(../images/background/bg-noise-primary.png);
+  }
+}
+
+// ------ width, height ------ //
+.w-fit {
+  width: fit-content;
+}
+
+.h-100vh {
+  min-height: 100vh;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+// ------ position ------ //
+.fixed-middle {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.porisiton-right-0 {
+  right: 0;
+}

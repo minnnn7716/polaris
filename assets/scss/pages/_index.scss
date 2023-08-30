@@ -1,0 +1,18 @@
+.index {
+  &-header {
+    background-image: url('../images/index/index-header-bg@2x.png');
+    background-size: cover;
+    background-position: center center;
+
+    &-radial {
+      width: 100vh;
+      height: 100vh;
+      background: radial-gradient(50% 50.00% at 50% 50.00%, #001725 0%, rgba(0, 23, 37, 0.00) 59.38%);
+      border-radius: 50%;
+    }
+
+    &-content {
+      z-index: 5;
+    }
+  }
+}

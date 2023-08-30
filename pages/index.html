@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+</head>
+
+<body>
+  <%- include('./layout/navbar'); -%>
+    <%- include('./component/progressbar'); -%>
+      <header id="start"
+        class="index-header h-100vh position-relative d-flex flex-column align-items-center justify-content-center">
+        <div class="index-header-content text-white text-center text-shadow-dark">
+          <h2 class="fs-h2 font-en-serif fw-extraBold">Polaris</h2>
+          <p class="fs-h6 lh-lg">
+            想成為工程師，該從何開始？<br>
+            有順序可以遵循嗎？半路迷失方向？
+          </p>
+        </div>
+        <div class="index-header-radial position-absolute"></div>
+      </header>
+      <section id="info"
+        class="index-info h-100vh bg-noise-dark py-10 d-flex justify-content-center align-items-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-10 title-sm title-sm-dark d-flex align-items-center mb-6 mb-xl-10">
+              <img class="me-4" src="../assets/images/icon/title-sm-light.svg" alt="title decoration">
+              <h2 class="fs-h5 fs-xl-h4 text-white">Roadmap 有些什麼？</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <ul class="col-1">
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+            </ul>
+            <img class="col-6" src="../assets/images/index/index-info-01.svg" alt="羅列五大主題">
+            <div class="col-3 text-white d-flex flex-column align-items-center">
+              <h3 class="fs-h2 fs-xl-h1 lh-1 text-center mb-8">
+                <span class="font-en-hand d-inline-block">Point</span>
+                <br>
+                <span class="font-en-sans">01</span>
+              </h3>
+              <h4 class="fs-1 fs-xl-h6 text-center w-fit pb-1 mb-8 mb-lx-12 border-bottom border-primary">羅列五大主題</h4>
+              <p class="fs-3 fs-xl-2 fw-light mb-0">依序統整五大主題，在地圖上查看主題與子項目，選定後可直接進入指定頁面，讓你不會迷失在茫茫頁面中。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="theme" class="index-theme bg-noise-light">
+      </section>
+      <section id="tool" class="index-tool bg-noise-light">
+      </section>
+      <section id="news" class="index-news bg-noise-primary">
+      </section>
+      <%- include('./layout/footer'); -%>
+        <script type="module" src="../main.js"></script>
+</body>
+
+</html>
