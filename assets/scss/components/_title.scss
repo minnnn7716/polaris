@@ -1,0 +1,98 @@
+.title-sm,
+.title-lg {
+  h2 {
+    padding: 0 $spacer * 4;
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -20%;
+      z-index: -1;
+      width: 100%;
+      height: 65%;
+      border-radius: $spacer * 10;
+    }
+  }
+}
+
+.title-sm {
+  &-light {
+    h2::after {
+      background-color: $primary;
+      opacity: 0.2;
+    }
+  }
+
+  &-dark {
+    h2::after {
+      background-color: $primary;
+      opacity: 0.6;
+    }
+  }
+}
+
+.title-lg {
+  &-solid,
+  &-outline {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-size: cover;
+    }
+
+    &::before {
+      width: 137px;
+      height: 77px;
+      right: 110%;
+    }
+
+    &::after {
+      width: 178px;
+      height: 63px;
+      left: 110%;
+    }
+  }
+
+  &-solid {
+    &::before {
+      background: url(/polaris/assets/images/icon/title-lg-solid-left.svg)
+        center no-repeat;
+    }
+
+    &::after {
+      background: url(/polaris/assets/images/icon/title-lg-solid-right.svg)
+        center no-repeat;
+    }
+
+    h2::after {
+      background-color: $primary;
+      opacity: 0.6;
+    }
+  }
+
+  &-outline {
+    &::before {
+      background: url(/polaris/assets/images/icon/title-lg-outline-left.svg)
+        center no-repeat;
+    }
+
+    &::after {
+      background: url(/polaris/assets/images/icon/title-lg-outline-right.svg)
+        center no-repeat;
+    }
+
+    h2 {
+      text-shadow: -1px -1px 0 $gray-900, 1px -1px 0 $gray-900,
+        -1px 1px 0 $gray-900, 1px 1px 0 $gray-900;
+      &::after {
+        background-color: $danger-500;
+        opacity: 0.6;
+      }
+    }
+  }
+}

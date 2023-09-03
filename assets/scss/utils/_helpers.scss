@@ -62,11 +62,19 @@
   .fs-xl-3 {
     font-size: $n3-font-size !important;
   }
+
+  .fs-xl-4 {
+    font-size: $n4-font-size !important;
+  }
 }
 
 // ------ shadow ------ //
-.text-shadow-dark {
+.textShadow-dark {
   text-shadow: 5px 5px 12px $customBlue-900;
+}
+
+.boxShadow-solid-primary {
+  box-shadow: 4px 6px 0px 0px $primary;
 }
 
 // ------ background ------ //
@@ -79,8 +87,8 @@
     background-image: url(../images/background/bg-noise-light.png);
   }
 
-  &-primary {
-    background-image: url(../images/background/bg-noise-primary.png);
+  &-secondary {
+    background-image: url(../images/background/bg-noise-secondary.png);
   }
 }
 
@@ -106,4 +114,27 @@
 
 .porisiton-right-0 {
   right: 0;
+}
+
+// ------ blend ------
+.blend-colorBurn {
+  mix-blend-mode: color-burn;
+}
+
+// ------ border-radius -----
+.rounded-6 {
+  border-radius: $spacer * 6;
+}
+
+// ------ transform ------
+.translateY-25 {
+  transform: translateY(25%);
+}
+
+.translateY-50 {
+  transform: translateY(50%);
+}
+
+.translateY-reduce-30 {
+  transform: translateY(-30%);
 }

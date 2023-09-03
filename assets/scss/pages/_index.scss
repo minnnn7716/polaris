@@ -1,18 +1,153 @@
 .index {
   &-header {
-    background-image: url('../images/index/index-header-bg@2x.png');
+    background-image: url("../images/index/index-header-bg@2x.png");
     background-size: cover;
     background-position: center center;
 
     &-radial {
       width: 100vh;
       height: 100vh;
-      background: radial-gradient(50% 50.00% at 50% 50.00%, #001725 0%, rgba(0, 23, 37, 0.00) 59.38%);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #001725 0%,
+        rgba(0, 23, 37, 0) 59.38%
+      );
       border-radius: 50%;
     }
 
     &-content {
       z-index: 5;
+    }
+  }
+
+  &-steps {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-ch-serif;
+    font-weight: 700;
+    &-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2em;
+      height: 2em;
+      line-height: 1;
+      color: $white;
+      background-color: rgb(225 225 225 / 15%);
+      border-radius: 50%;
+
+      &.active {
+        background-color: rgba(232 193 62 / 20%);
+        border: 1px solid $primary;
+      }
+    }
+    &-line {
+      margin: 8px 0;
+      width: 1.5px;
+      flex-grow: 1;
+      background-color: rgb(225 225 225 / 25%);
+
+      &.active {
+        background-color: rgba(232 193 62 / 70%);
+      }
+    }
+  }
+
+  &-theme {
+    &-list {
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 1.3em 0;
+        text-align: center;
+        font-weight: 800;
+        color: $secondary;
+        background-color: $white;
+        border-radius: 5em;
+        border: 2px solid $secondary;
+        transition: all ease 0.5s;
+      }
+
+      a:not(.active):hover {
+        border-radius: 0.85em;
+        color: $white;
+        background-color: $secondary-700;
+      }
+
+      .active {
+        position: relative;
+        color: $white;
+        background-color: $secondary;
+        border-radius: 0.85em;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 8px;
+          right: 5%;
+          width: 32px;
+          height: 32px;
+          background: url("../images/icon/deco-sixAngleStar.svg") center
+            no-repeat;
+          background-size: cover;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 16px;
+          left: -12px;
+          width: 33px;
+          height: 29px;
+          background: url("../images/icon/deco-circles.svg") center no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+
+    &-item {
+      &-content {
+        margin-right: -17%;
+      }
+
+      &-character {
+        right: 12%;
+        height: 95%;
+        bottom: -12px;
+      }
+    }
+  }
+
+  &-scrollText {
+    &-item {
+      &:first-child {
+        transform: translateX(-35vw);
+      }
+      &:nth-child(2) {
+        transform: translateX(30vw);
+      }
+
+      &:last-child {
+        transform: translateX(4vw);
+      }
+    }
+  }
+
+  &-tool {
+    &-imgs-top {
+      margin-bottom: -10%;
+    }
+
+    &-imgs-center {
+      z-index: 5;
+    }
+
+    &-imgs-bottom {
+      margin-top: -5%;
+      z-index: 10;
     }
   }
 }

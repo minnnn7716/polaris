@@ -1,0 +1,18 @@
+.button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: $secondary-700;
+  background-color: $primary;
+  border: 2px solid $secondary-700;
+  box-shadow: 0 8px 0 $secondary-700;
+  border-radius: 50rem;
+  transition: all ease 0.5s;
+
+  &:hover {
+    margin-bottom: -8px;
+    box-shadow: 0 0 0 $secondary-700;
+  }
+}
