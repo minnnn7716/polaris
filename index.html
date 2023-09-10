@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>index</title>
-  <script type="module" crossorigin src="/polaris/assets/index-e184ddf0.js"></script>
-  <link rel="stylesheet" href="/polaris/assets/index-a40ee3af.css">
+  <script type="module" crossorigin src="/polaris/assets/index-ea5020f6.js"></script>
+  <link rel="stylesheet" href="/polaris/assets/index-3eff8e4f.css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
       </ul>
     </div>
   </div>
-</nav>    <div class="procressbar d-flex fixed-middle porisiton-right-0 me-12">
+</nav>    <div class="procressbar d-none d-md-flex fixed-middle porisiton-right-0 me-12">
   <div class="me-1 d-flex justify-content-end">
     <img class="h-20" src="/polaris/assets/progressbar-light-7094e1a2.svg" alt="progressbar icon">
   </div>
@@ -52,44 +52,158 @@
     <li><a class="link-light" href="#tool">Tool</a></li>
     <li><a class="link-light" href="#news">News</a></li>
   </ul>
-</div>      <header id="start"
-        class="index-header h-100vh position-relative d-flex flex-column align-items-center justify-content-center">
-        <div class="index-header-content text-white text-center text-shadow-dark">
-          <h2 class="fs-h3 font-en-serif fw-extraBold">Polaris</h2>
-          <p class="fs-1 lh-lg">
+</div>      <header id="start" class="index-header h-100vh position-relative">
+        <!-- header grid items - images -->
+        <div class="grid-container-keyboard position-relative">
+          <img class="w-150 position-absolute bottom-0 end-0" src="/polaris/assets/index-header-keyboard-85164799.png"
+            alt="keyboard">
+        </div>
+        <div class="grid-container-moon position-relative">
+          <img class="w-100 position-absolute bottom-0 start-0 z-index-5"
+            src="/polaris/assets/index-header-moon-0a495cc0.png" alt="moon">
+        </div>
+        <div class="grid-container-keyInsert inlineGrid-center">
+          <img class="w-80 ratio-cover" src="/polaris/assets/index-header-key-insert-7a04abe2.png" alt="key-insert">
+        </div>
+        <div class="grid-container-keyFour inlineGrid-center">
+          <img class="w-60 ratio-cover" src="/polaris/assets/index-header-key-4-6a76e142.png" alt="key-four">
+        </div>
+        <div class="grid-container-keyF4 position-relative">
+          <img class="w-100 position-absolute top-0 end-0" src="/polaris/assets/index-header-key-f4-39691309.png"
+            alt="key-f4">
+        </div>
+        <div class="grid-container-handLeft position-relative z-index-5">
+          <img class="w-100 position-absolute top-0 start" src="/polaris/assets/index-header-hand-left-582ad0b2.png"
+            alt="hand-left">
+        </div>
+        <div class="grid-container-handRight position-relative z-index-5">
+          <img class="w-90 position-absolute top-0 end-0" src="/polaris/assets/index-header-hand-right-aad9e6c8.png"
+            alt="hand-right">
+        </div>
+        <div class="grid-container-astronaut position-relative">
+          <img class="w-95 position-absolute top-0 end-0" src="/polaris/assets/index-header-astronaut-3fdc478a.png"
+            alt="astronaut">
+        </div>
+        <div class="grid-container-computer position-relative">
+          <img class="position-absolute top-0 start-30" src="/polaris/assets/index-header-computer-324027f8.png"
+            alt="computer">
+        </div>
+        <!-- header grid items - text -->
+        <div class="grid-container-word grid-container-word-F inlineGrid-center">
+          <span>F</span>
+        </div>
+        <div class="grid-container-word grid-container-word-R inlineGrid-center">
+          <span>R</span>
+        </div>
+        <div class="grid-container-word grid-container-word-O inlineGrid-center">
+          <span>O</span>
+        </div>
+        <div class="grid-container-word grid-container-word-N-1 inlineGrid-center z-index-10">
+          <span>N</span>
+        </div>
+        <div class="grid-container-word grid-container-word-T inlineGrid-center">
+          <span>T</span>
+        </div>
+        <div class="grid-container-word grid-container-word-E inlineGrid-center">
+          <span>E</span>
+        </div>
+        <div class="grid-container-word grid-container-word-N-2 position-relative">
+          <span class="position-absolute top-0 end-50 translate-y-middle">N</span>
+        </div>
+        <div class="grid-container-word grid-container-word-D inlineGrid-center">
+          <span>D</span>
+        </div>
+        <div class="grid-container-code grid-container-code-left position-relative">
+          <p class="position-absolute top-0 start-0">const resumeTimer = () => { <br>
+            &nbsp;&nbsp;timerTickingSound.play();<br>
+            &nbsp;&nbsp;timerInterval = setInterval(() => {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;const currentRotation = getTimeRulerRotation();<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if ((currentRotation + secondDegreeInterval) >= 0) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egg.classList.add('ringing');<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updateTime(0);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stopTimer();<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timerAlarmSound.once('end', () => {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egg.classList.remove('ringing');<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timerAlarmSound.play();<br>
+            navigator.vibrate?.(timerAlarmSound.duration() * 1000);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timerButton.disabled = true;<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;<br>
+            };<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;const newRotation = currentRotation + secondDegreeInterval;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;timeRuler.style.setProperty('--rotation', `${newRotation}deg`);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;const translation =
+            parseFloat(getComputedStyle(eggTop).getPropertyValue('--background-translation'));<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;const newTranslation = translation + (12 / 10);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;eggTop.style.setProperty('--background-translation', `${newTranslation}px`);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;updateTime(newRotation);<br>
+            &nbsp;&nbsp;}, 1000);<br>
+            };
+          </p>
+        </div>
+        <div class="grid-container-code grid-container-code-right position-relative">
+          <p class="position-absolute top-0 start-0">
+            const resumeTimer = () => {<br>
+            &nbsp;&nbsp;timerTickingSound.play();<br>
+            &nbsp;&nbsp;timerInterval = setInterval(() => {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;const currentRotation = getTimeRulerRotation();<br>
+            &nbsp;&nbsp;}<br>
+            )};
+          </p>
+        </div>
+        <!-- header grid items - ellipse -->
+        <div class="grid-container-circle-25-1 inlineGrid-center">
+          <span class="circle-25"></span>
+        </div>
+        <div class="grid-container-circle-25-2 inlineGrid-top-right">
+          <span class="circle-25"></span>
+        </div>
+        <div class="grid-container-circle-10 inlineGrid-top-right">
+          <span class="circle-10"></span>
+        </div>
+
+        <!-- header text content -->
+        <div
+          class="index-header-content w-100 text-white text-center text-shadow-dark position-absolute top-50 start-50 translate-middle">
+          <h2 class="fs-h3 font-en-serif fw-extraBold lh-base mb-4">Polaris</h2>
+          <p class="fs-2 fs-xl-1 lh-lg">
             想成為工程師，該從何開始？<br>
             有順序可以遵循嗎？半路迷失方向？
           </p>
         </div>
-        <div class="index-header-radial position-absolute"></div>
+        <div class="index-header-radial position-absolute top-50 start-50 translate-middle"></div>
       </header>
       <section id="info-01"
-        class="index-info h-100vh bg-noise-dark py-10 d-flex justify-content-center align-items-center">
+        class="index-info h-100vh bg-noise-dark py-0 py-md-6 d-flex justify-content-center align-items-center">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-10 title-sm title-sm-light d-flex align-items-center mb-6 mb-xl-10">
+            <div class="col-12 col-md-10 title-sm title-sm-light d-flex align-items-center mb-6 mb-xl-10">
               <img class="me-4" src="/polaris/assets/title-sm-light-f8d462a6.svg" alt="title decoration">
               <h2 class="fs-h6 fs-xl-h5 text-white">Roadmap 有些什麼？</h2>
             </div>
           </div>
-          <div class="row justify-content-center align-items-center">
-            <ul class="index-steps list-unstyled col-1 fs-5 fs-xl-1 mb-0">
+          <div class="row flex-column flex-md-row justify-content-center align-items-center">
+            <ul class="index-steps d-none d-md-flex list-unstyled col-1 fs-5 fs-xl-1 mb-0">
               <li><a class="index-steps-number active" href="#info-01">1</a></li>
               <li class="index-steps-line"></li>
               <li><a class="index-steps-number" href="#info-02">2</a></li>
               <li class="index-steps-line"></li>
               <li><a class="index-steps-number" href="#info-03">3</a></li>
             </ul>
-            <img class="col-6" src="/polaris/assets/index-info-01-74997687.svg" alt="羅列五大主題">
-            <div class="col-3 text-white d-flex flex-column align-items-center">
-              <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-8">
+            <img class="col-12 col-md-6" src="/polaris/assets/index-info-01-74997687.svg" alt="羅列五大主題">
+            <div class="col-12 col-md-3 text-white d-flex flex-column align-items-center">
+              <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
                 <span class="font-en-hand d-inline-block">Point</span>
-                <br>
+                <br class="d-none d-md-block">
                 <span class="font-en-sans">01</span>
               </h3>
-              <h4 class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-8 mb-lx-12 border-bottom border-primary border-2">
+              <h4
+                class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
                 羅列五大主題</h4>
-              <p class="fs-2 fs-xl-3 fw-light mb-0">
+              <p class="fs-4 fs-xl-3 fw-light mb-0">
                 依序統整五大主題，在地圖上查看主題與子項目，選定後可直接進入指定頁面，讓你不會迷失在茫茫頁面中。
               </p>
             </div>
@@ -97,24 +211,25 @@
         </div>
       </section>
       <section id="info-02"
-        class="index-info h-100vh bg-noise-dark py-10 d-flex justify-content-center align-items-center">
+        class="index-info h-100vh bg-noise-dark py-0 py-md-6 d-flex justify-content-center align-items-center">
         <div class="container">
           <div class="row justify-content-center align-items-center">
-            <ul class="index-steps list-unstyled col-1 fs-1 fs-xl-1 mb-0">
+            <ul class="index-steps d-none d-md-flex list-unstyled col-1 fs-1 fs-xl-1 mb-0">
               <li><a class="index-steps-number active" href="#info-01">1</a></li>
               <li class="index-steps-line active"></li>
               <li><a class="index-steps-number active" href="#info-02">2</a></li>
               <li class="index-steps-line"></li>
               <li><a class="index-steps-number" href="#info-03">3</a></li>
             </ul>
-            <img class="col-6" src="/polaris/assets/index-info-02-ba4a5f4c.svg" alt="如影隨形伴隨你">
-            <div class="col-3 text-white d-flex flex-column align-items-center">
-              <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-8">
+            <img class="col-12 col-md-6" src="/polaris/assets/index-info-02-ba4a5f4c.svg" alt="如影隨形伴隨你">
+            <div class="c0l-12 col-md-3 text-white d-flex flex-column align-items-center">
+              <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
                 <span class="font-en-hand d-inline-block">Point</span>
-                <br>
+                <br class="d-none d-md-block">
                 <span class="font-en-sans">02</span>
               </h3>
-              <h4 class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-8 mb-lx-12 border-bottom border-primary border-2">
+              <h4
+                class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
                 如影隨形伴隨你</h4>
               <p class="fs-4 fs-xl-3 fw-light mb-0">
                 地圖按鈕將會常駐於導覽列，默默的守護不打擾你的旅程，當你需要時絕對不會找不他。
@@ -124,24 +239,25 @@
         </div>
       </section>
       <section id="info-03"
-        class="index-info h-100vh bg-noise-dark py-10 d-flex justify-content-center align-items-center">
+        class="index-info h-100vh bg-noise-dark py-0 py-md-6 d-flex justify-content-center align-items-center">
         <div class="container">
           <div class="row justify-content-center align-items-center">
-            <ul class="index-steps list-unstyled col-1 fs-2 fs-xl-1 mb-0">
+            <ul class="index-steps d-none d-md-flex list-unstyled col-1 fs-2 fs-xl-1 mb-0">
               <li><a class="index-steps-number active" href="#info-01">1</a></li>
               <li class="index-steps-line active"></li>
               <li><a class="index-steps-number active" href="#info-02">2</a></li>
               <li class="index-steps-line active"></li>
               <li><a class="index-steps-number active" href="#info-03">3</a></li>
             </ul>
-            <img class="col-6" src="/polaris/assets/index-info-03-d631dbf4.svg" alt="釋放腦中記憶體">
-            <div class="col-3 text-white d-flex flex-column align-items-center">
-              <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-8">
+            <img class="col-12 col-md-6" src="/polaris/assets/index-info-03-d631dbf4.svg" alt="釋放腦中記憶體">
+            <div class="c0l-12 col-md-3 text-white d-flex flex-column align-items-center">
+              <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
                 <span class="font-en-hand d-inline-block">Point</span>
-                <br>
+                <br class="d-none d-md-block">
                 <span class="font-en-sans">03</span>
               </h3>
-              <h4 class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-8 mb-lx-12 border-bottom border-primary border-2">
+              <h4
+                class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
                 釋放腦中記憶體</h4>
               <p class="fs-4 fs-xl-3 fw-light mb-0">
                 讓我們幫你記下你的學習旅程！可在學習過的上勾選完成，紀錄學習進度，一目了然且不必額外紀錄學習位置。
@@ -151,29 +267,31 @@
         </div>
       </section>
       <div class="bg-noise-light">
-        <section id="theme" class="index-theme container py-40">
+        <section id="theme" class="index-theme container py-10 py-lg-40">
           <div class="row align-items-center">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <div class="title-sm title-sm-dark d-flex align-items-center mb-6 mb-xl-10">
                 <img class="me-4" src="/polaris/assets/title-sm-dark-054b803b.svg" alt="title decoration">
                 <h2 class="fs-h6 fs-xl-h5 text-secondary fw-bold">Roadmap 五大主題</h2>
               </div>
-              <ul class="index-theme-list list-unstyled row justify-content-center font-en-serif fs-h6">
-                <li class="col-4 mb-6"><a class="active" href="#">HTML</a></li>
-                <li class="col-4 mb-6"><a href="#">CSS</a></li>
-                <li class="col-4 mb-6"><a href="#">JavaScript</a></li>
+              <ul
+                class="index-theme-list list-unstyled row g-2 g-md-5 justify-content-center font-en-serif fs-2 fs-xl-h6">
+                <li class="col-4 mb-2 mb-md-6"><a class="active" href="#">HTML</a></li>
+                <li class="col-4 mb-2 mb-md-6"><a href="#">CSS</a></li>
+                <li class="col-4 mb-2 mb-md-6"><a href="#">JavaScript</a></li>
                 <li class="col-4"><a href="#">工具與套件</a></li>
                 <li class="col-4"><a href="#">軟實力</a></li>
               </ul>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <div class="row flex-nowrap align-items-end position-relative">
-                <div class="col-6 position-relative index-theme-item-content d-flex flex-column align-items-end">
-                  <h3 class="font-en-sans text-gray-700 text-end blend-colorBurn">HTML</h3>
+                <div
+                  class="col-12 col-md-6 position-relative index-theme-item-content d-flex flex-column align-items-end">
+                  <h3 class="font-en-sans text-gray-700 text-end blend-colorBurn d-none d-md-block">HTML</h3>
                   <p class="bg-white fw-light px-6 pt-6 pb-8 mb-0 rounded-6">
                     製作網頁首先要了解的起始點！HTML 的功用是定義頁面的結構，就像人體中的骨頭，需要骨頭連結支撐，才能夠搭起肌肉與皮膚。
                   </p>
-                  <a class="index-theme-item-button button fs-2 py-2 px-8 position-absolute bottom-0 left-0 translateY-25"
+                  <a class="index-theme-item-button button fs-3 fs-xl-2 py-2 px-8 position-absolute bottom-0 left-0 translateY-25"
                     href="#">
                     前往了解
                     <span class="material-icons-outlined">
@@ -181,7 +299,7 @@
                     </span>
                   </a>
                 </div>
-                <div class="col-8">
+                <div class="col-8 d-none d-md-block">
                   <img class="index-theme-item-character position-absolute"
                     src="/polaris/assets/index-theme-html-character-7ee91d6a.svg" alt="HTML 主題人物">
                   <img class="img-fluid" src="/polaris/assets/index-theme-html-bg-e59bbeef.png" alt="HTML 主題背景">
@@ -190,28 +308,28 @@
             </div>
           </div>
         </section>
-        <section class="index-scrollText overflow-hidden fs-h3 font-en-sans fw-medium ">
+        <section class="index-scrollText overflow-hidden fs-h5 fs-xl-h3 font-en-sans fw-medium">
           <p class="index-scrollText-item text-secondary-300 text-nowrap mb-0">
             RoadMap of Five Themes &nbsp;&nbsp; RoadMap of Five Themes &nbsp;&nbsp; RoadMap of Five Themes
           </p>
           <p class="index-scrollText-item text-secondary text-nowrap mb-0">
             Frontend RoadMap &nbsp;&nbsp; Frontend RoadMap &nbsp;&nbsp; Frontend RoadMap
-          <p>
+          </p>
           <p class="index-scrollText-item text-primary text-nowrap mb-0">
             Polaris with you &nbsp;&nbsp; Polaris with you &nbsp;&nbsp; Polaris with you &nbsp;&nbsp; Polaris with you
             &nbsp;&nbsp; Polaris with you
-          <p>
+          </p>
         </section>
-        <section id="tool" class="index-tool container py-40 d-flex flex-column align-items-center">
-          <div class="title-lg title-lg-solid mb-10 w-fit">
-            <h2 class="fs-h4 fw-bold text-secondary">工具箱</h2>
+        <section id="tool" class="index-tool container py-10 py-md-40 d-flex flex-column align-items-center">
+          <div class="title-lg title-lg-solid mb-6 mb-md-10 w-fit">
+            <h2 class="fs-h5 fs-xl-h4 fw-bold text-secondary">工具箱</h2>
           </div>
           <div class="row justify-content-center">
-            <p class="col-8 fs-2 fw-light text-center mb-16">
+            <p class="col-12 col-md-8 fs-3 fs-xl-2 fw-light text-center mb-4 mb-md-16">
               讓線上工具成為你學習、創造與成長的助力。無論你是初學者抑或已具經驗，這裡收集許多我們覺得好用的工具，正等你探索選用。透過工具加速開發效能，讓你事倍功半！
             </p>
           </div>
-          <div class="index-tool-imgs-top row justify-content-center">
+          <div class="index-tool-imgs-top row justify-content-center d-none d-md-flex">
             <div class="col-10">
               <div class="row justify-content-between align-items-center">
                 <div class="col-5">
@@ -225,13 +343,13 @@
               </div>
             </div>
           </div>
-          <div class="index-tool-imgs-center row justify-content-center">
+          <div class="index-tool-imgs-center row justify-content-center mb-4 mb-md-0">
             <div class="col-10">
               <img class="img-fluid rounded-4 boxShadow-solid-primary border border-4 border-primary shadow"
                 src="/polaris/assets/index-tool-codepen-5a421489.png" alt="codepen">
             </div>
           </div>
-          <div class="index-tool-imgs-bottom row justify-content-center mb-6">
+          <div class="index-tool-imgs-bottom row justify-content-center mb-6 d-none d-md-flex">
             <div class="col-9">
               <div class="row justify-content-between">
                 <div class="col-4">
@@ -244,7 +362,7 @@
               </div>
             </div>
           </div>
-          <a class="button fs-1 py-4 px-8" href="#">
+          <a class="button fs-3 fs-xl-1 py-2 py-md-4 px-8" href="#">
             前往工具箱
             <span class="material-icons-outlined">
               arrow_outward
@@ -252,21 +370,21 @@
           </a>
         </section>
       </div>
-      <section id="news" class="index-news bg-noise-secondary py-30">
+      <section id="news" class="index-news bg-noise-secondary py-10 py-md-30">
         <div class="container d-flex flex-column align-items-center">
-          <div class="title-lg title-lg-outline mb-10 w-fit mb-15">
-            <h2 class="fs-h4 fw-bold text-white">最新消息</h2>
+          <div class="title-lg title-lg-outline mb-10 w-fit mb-6 mb-md-15">
+            <h2 class="fs-h5 fs-xl-h4 fw-bold text-white">最新消息</h2>
           </div>
           <div class="row justify-content-center">
-            <ul class="text-gray-900 col-10 list-unstyled">
+            <ul class="text-gray-900 col-11 col-md-10 list-unstyled">
               <li class="row justify-content-center">
-                <div class="col-6 pb-4">
+                <div class="col-12 col-md-6 pb-4">
                   <img class="img-fluid rounded-4" src="/polaris/assets/index-news-01-a074c6e3.png" alt="延伸學習來囉，滿足你的求知慾！">
                 </div>
-                <div class="col-6 pb-4">
+                <div class="col-12 col-md-6 pb-4">
                   <time class="d-inline-block fs-4 mb-2">2023-09-10</time>
-                  <h3 class="fs-h6 fw-medium mb-4">延伸學習來囉，滿足你的求知慾！</h3>
-                  <p class="fw-light">
+                  <h3 class="fs-2 fs-xl-h6 fw-medium mb-4">延伸學習來囉，滿足你的求知慾！</h3>
+                  <p class="fs-4 fs-xl-3 fw-light">
                     HTML
                     主題提供除了原有的項目「基本概念」、「組合運用」、「實作練習」、「學習資源」外，添加了「延伸學習」。提供給已經完成站內逐步學習的你繼續擴展學習，我們將羅列可延伸的熱門主題，撰寫簡介讓你了解是否有興趣，提供學習文章連結
                     <br><br>
@@ -275,35 +393,38 @@
                 </div>
               </li>
               <li
-                class="d-flex align-items-center justify-content-between border-top border-bottom border-white py-8 px-4">
-                <h3 class="fs-2 mb-0">HTML 主題開放囉！</h3>
-                <time class="fs-2">2023-09-01</time>
+                class="d-flex flex-column flex-md-row align-items-md-center justify-content-between border-top border-bottom border-white py-4 py-md-8 px-4">
+                <h3 class="fs-2 mb-2 mb-md-0">HTML 主題開放囉！</h3>
+                <time class="fs-4 fs-xl-2">2023-09-01</time>
               </li>
-              <li class="d-flex align-items-center justify-content-between border-bottom border-white py-8 px-4">
-                <h3 class="fs-2 mb-0">工具箱添加新類別，歡迎大家投稿</h3>
-                <time class="fs-2">2023-08-20</time>
+              <li
+                class="d-flex flex-column flex-md-row align-items-md-center justify-content-between border-bottom border-white py-4 py-md-8 px-4">
+                <h3 class="fs-2 mb-2 mb-md-0">工具箱添加新類別，歡迎大家投稿</h3>
+                <time class="fs-4 fs-xl-2">2023-08-20</time>
               </li>
-              <li class="d-flex align-items-center justify-content-between border-bottom border-white py-8 px-4">
-                <h3 class="fs-2 mb-0">各主題時程規劃</h3>
-                <time class="fs-2">2023-08-15</time>
+              <li
+                class="d-flex flex-column flex-md-row align-items-md-center justify-content-between border-bottom border-white py-4 py-md-8 px-4">
+                <h3 class="fs-2 mb-2 mb-md-0">各主題時程規劃</h3>
+                <time class="fs-4 fs-xl-2">2023-08-15</time>
               </li>
-              <li class="d-flex align-items-center justify-content-between border-bottom border-white py-8 px-4">
-                <h3 class="fs-2 mb-0">Polaris 前端地圖網頁開張囉！</h3>
-                <time class="fs-2">2023-08-10</time>
+              <li
+                class="d-flex flex-column flex-md-row align-items-md-center justify-content-between border-bottom border-white py-4 py-md-8 px-4">
+                <h3 class="fs-2 mb-2 mb-md-0">Polaris 前端地圖網頁開張囉！</h3>
+                <time class="fs-4 fs-xl-2">2023-08-10</time>
               </li>
             </ul>
           </div>
         </div>
       </section>
       <footer class="bg-secondary-900 text-white py-8">
-  <div class="container d-flex justify-content-between align-items-center">
-    <div>
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="mb-6 mb-md-0">
       <a class="link-light" href="index.html">
         <h2 class="fs-h5 fw-extraBold font-en-serif">Polaris</h2>
         <p class="fs-4 fw-light mb-0">前端學習地圖</p>
       </a>
     </div>
-    <div class="fs-4 text-end">
+    <div class="fs-4 text-center text-md-end">
       <a class="d-inline-block mb-2" href="mailto: polaris.map.1618@gmail.com">
         polaris.map.1618@gmail.com
       </a>
