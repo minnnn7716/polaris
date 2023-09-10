@@ -26,7 +26,7 @@
 }
 
 // font-size
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-up(xl) {
   .fs-xl-h1 {
     font-size: $h1-font-size !important;
   }
@@ -97,12 +97,42 @@
   width: fit-content;
 }
 
+.w-150 {
+  width: 150%;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
 .h-100vh {
   min-height: 100vh;
 }
 
 .h-20 {
   height: 20%;
+}
+
+.ratio {
+  &-contain {
+    object-fit: contain;
+  }
+
+  &-cover {
+    object-fit: cover;
+  }
 }
 
 // ------ position ------ //
@@ -116,17 +146,47 @@
   right: 0;
 }
 
-// ------ blend ------
+.start-30 {
+  left: 30%;
+}
+
+.z-index-5 {
+  z-index: 5;
+}
+h5 .z-index-10 {
+  z-index: 10;
+}
+
+// ------ grid ------ //
+.inlineGrid-center {
+  display: inline-grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.inlineGrid-end-center {
+  display: inline-grid;
+  justify-items: end;
+  align-items: center;
+}
+
+.inlineGrid-top-right {
+  display: inline-grid;
+  justify-items: right;
+  align-items: start;
+}
+
+// ------ blend ------ //
 .blend-colorBurn {
   mix-blend-mode: color-burn;
 }
 
-// ------ border-radius -----
+// ------ border-radius ----- //
 .rounded-6 {
   border-radius: $spacer * 6;
 }
 
-// ------ transform ------
+// ------ transform ------ //
 .translateY-25 {
   transform: translateY(25%);
 }
@@ -137,4 +197,18 @@
 
 .translateY-reduce-30 {
   transform: translateY(-30%);
+}
+
+// ------ shadow ------ //
+.text-shadow-dark {
+  text-shadow: 5px 5px 12px $shadowColor-weight;
+}
+
+// ------ ellipse ------ //
+.circle-25 {
+  @include circle(1.5vw);
+}
+
+.circle-10 {
+  @include circle(0.5vw);
 }

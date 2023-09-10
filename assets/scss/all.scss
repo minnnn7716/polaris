@@ -1,22 +1,24 @@
 // google font
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@700&family=Oswald:wght@400;500&family=Playfair+Display:wght@700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@700&family=Oswald:wght@400;500&family=Playfair+Display:wght@700;800&family=VT323&display=swap");
 // google icon
-@import url('https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp');
+@import url("https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp");
 
 // bootstrap
-@import '../../node_modules/bootstrap/scss/functions';
-@import '../scss/utils/variables';
-@import '../../node_modules/bootstrap';
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../scss/utils/variables";
+@import "../../node_modules/bootstrap";
 
 // custom
-@import '../scss/utils/helpers';
+// utilities
+@import "../scss/utils/mixins";
+@import "../scss/utils/helpers";
 
 // layout, component
-@import './layout/navbar';
-@import './layout/footer';
-@import './components/procressbar';
-@import './components/title';
-@import './components/button';
+@import "./layout/navbar";
+@import "./layout/footer";
+@import "./components/procressbar";
+@import "./components/title";
+@import "./components/button";
 
 // page
-@import './pages/index';
+@import "./pages/index";

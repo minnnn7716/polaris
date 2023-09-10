@@ -1,0 +1,7 @@
+@mixin circle($width: 8px, $bgColor: $primary) {
+  display: inline-block;
+  width: $width;
+  height: $width;
+  border-radius: 50%;
+  background-color: $bgColor;
+}

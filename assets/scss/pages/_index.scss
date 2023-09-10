@@ -1,22 +1,28 @@
 .index {
   &-header {
+    display: grid;
+    grid-template-columns: repeat(35, 1fr);
+    grid-template-rows: repeat(25, 1fr);
+
     background-image: url("../images/index/index-header-bg@2x.png");
     background-size: cover;
     background-position: center center;
 
-    &-radial {
-      width: 100vh;
-      height: 100vh;
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        #001725 0%,
-        rgba(0, 23, 37, 0) 59.38%
-      );
-      border-radius: 50%;
+    &-content {
+      z-index: 50;
     }
 
-    &-content {
-      z-index: 5;
+    &-radial {
+      width: 100vw;
+      height: 100vw;
+      background: radial-gradient(50% 50% at 50% 50%, rgb(0 23 37 / 70%) 0%, rgb(0 23 37 / 0) 90%);
+      border-radius: 50%;
+
+      @include media-breakpoint-up(lg) {
+        width: 100vh;
+        height: 100vh;
+        background: radial-gradient(50% 50% at 50% 50%, rgb(0 23 37 / 85%) 0%, rgb(0 23 37 / 0) 60%);
+      }
     }
   }
 
@@ -61,7 +67,7 @@
       a {
         display: inline-block;
         width: 100%;
-        padding: 1.3em 0;
+        padding: 0.8em 0;
         text-align: center;
         font-weight: 800;
         color: $secondary;
@@ -69,6 +75,10 @@
         border-radius: 5em;
         border: 2px solid $secondary;
         transition: all ease 0.5s;
+
+        @include media-breakpoint-up(lg) {
+          padding: 1.3em 0;
+        }
       }
 
       a:not(.active):hover {
@@ -86,13 +96,19 @@
         &::before {
           content: "";
           position: absolute;
-          top: 8px;
+          top: 0;
           right: 5%;
-          width: 32px;
-          height: 32px;
-          background: url("../images/icon/deco-sixAngleStar.svg") center
-            no-repeat;
+          width: 24px;
+          height: 24px;
+          background: url("../images/icon/deco-sixAngleStar.svg") center no-repeat;
           background-size: cover;
+
+          @include media-breakpoint-up(lg) {
+            top: 8px;
+            right: 5%;
+            width: 32px;
+            height: 32px;
+          }
         }
 
         &::after {
@@ -149,5 +165,164 @@
       margin-top: -5%;
       z-index: 10;
     }
+  }
+}
+
+// header grid items
+.grid-container {
+  &-keyboard {
+    grid-area: 1/1/5/8;
+    overflow-y: clip;
+
+    img {
+      transform-origin: bottom right;
+      transform: rotate(25deg);
+      filter: blur(3px);
+    }
+  }
+
+  &-moon {
+    grid-area: 1/19/6/24;
+    overflow-y: clip;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+      @include circle(5vw);
+    }
+  }
+
+  &-keyInsert {
+    grid-area: 7/11/10/13;
+
+    img {
+      transform: rotate(-50deg);
+    }
+  }
+
+  &-keyFour {
+    grid-area: 21/16/24/18;
+
+    img {
+      transform: rotate(30deg);
+    }
+  }
+
+  &-keyF4 {
+    grid-area: 12/1/16/3;
+    overflow-y: clip;
+
+    img {
+      transform-origin: top left;
+      transform: rotate(30deg);
+      filter: blur(4px);
+    }
+  }
+
+  &-handLeft {
+    grid-area: 15/4/22/12;
+  }
+
+  &-handRight {
+    grid-area: 3/24/12/32;
+  }
+
+  &-astronaut {
+    grid-area: 18/24/25/30;
+  }
+
+  &-computer {
+    grid-area: 12/34/21/36;
+    overflow-x: clip;
+
+    img {
+      transform: rotate(30deg);
+      filter: blur(3px);
+    }
+  }
+
+  &-word {
+    font-family: $font-en-serif;
+    font-weight: bold;
+    color: $primary;
+    line-height: 1;
+    text-shadow: 5px 5px 12px $shadowColor-weight;
+    &-F {
+      grid-area: 3/5/6/7;
+      font-size: 5.5vw;
+      transform: rotate(-12deg);
+    }
+    &-R {
+      grid-area: 3/27/6/29;
+      font-size: 4vw;
+    }
+    &-O {
+      grid-area: 8/15/10/16;
+      font-size: 2vw;
+    }
+    &-N-1 {
+      grid-area: 18/5/20/6;
+      font-size: 2.5vw;
+    }
+    &-T {
+      grid-area: 14/30/16/32;
+      font-size: 3.5vw;
+      transform: rotate(45deg);
+    }
+    &-E {
+      grid-area: 22/12/24/14;
+      font-size: 3.5vw;
+      transform: rotate(-25deg);
+    }
+    &-N-2 {
+      grid-area: 23/33/26/35;
+      font-size: 6.5vw;
+      overflow-y: clip;
+      span {
+        transform: rotate(15deg);
+      }
+    }
+    &-D {
+      grid-area: 21/23/23/25;
+      font-size: 3vw;
+    }
+  }
+
+  &-code {
+    font-family: $font-en-code;
+    font-size: 0.8vw;
+    letter-spacing: 0.1em;
+    color: rgba(255 255 255 / 50%);
+
+    &-left {
+      grid-area: 10/2/26/20;
+      overflow-y: clip;
+    }
+
+    &-right {
+      grid-area: 5/30/9/36;
+      overflow-x: clip;
+    }
+  }
+
+  &-circle {
+    &-25-1 {
+      grid-area: 8/2/9/3;
+    }
+    &-25-2 {
+      grid-area: 14/33/15/34;
+    }
+    &-10 {
+      grid-area: 11/32/12/33;
+    }
+  }
+}
+
+.move {
+  .grid-container-astronaut {
+    grid-area: 11/20/18/26;
   }
 }
