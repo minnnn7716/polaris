@@ -1,5 +1,8 @@
 .procressbar {
-  z-index: 5;
+  z-index: 2000;
+  transition: all ease 0.5s;
+  opacity: 0;
+  transition: all ease 0.5s;
 
   &-title {
     color: $white;
@@ -14,6 +17,7 @@
       width: 100%;
       background: url("../images/icon/progressbar-light.svg") center right no-repeat;
       background-size: contain;
+      transition: all ease 0.5s;
     }
   }
 

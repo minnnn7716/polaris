@@ -34,6 +34,7 @@
     align-items: center;
     font-family: $font-ch-serif;
     font-weight: 700;
+    transition: all ease 0.3s;
     &-number {
       display: flex;
       align-items: center;
@@ -55,6 +56,7 @@
       width: 1.5px;
       flex-grow: 1;
       background-color: rgb(225 225 225 / 25%);
+      transition: all ease 0.3s;
 
       &.active {
         background-color: rgba(232 193 62 / 70%);
@@ -141,13 +143,23 @@
     &-item {
       &:first-child {
         transform: translateX(-35vw);
+        animation: my-animation 20s linear infinite;
       }
       &:nth-child(2) {
-        transform: translateX(30vw);
       }
 
       &:last-child {
         transform: translateX(4vw);
+        animation: my-animation 30s linear infinite;
+      }
+    }
+
+    @keyframes my-animation {
+      from {
+        transform: translateX(-35vw);
+      }
+      to {
+        transform: translateX(35vw);
       }
     }
   }
