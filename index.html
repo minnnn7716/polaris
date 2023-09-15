@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>index</title>
-  <script type="module" crossorigin src="/polaris/assets/index-ea5020f6.js"></script>
-  <link rel="stylesheet" href="/polaris/assets/index-3eff8e4f.css">
+  <script type="module" crossorigin src="/polaris/assets/index-3e9471ad.js"></script>
+  <link rel="stylesheet" href="/polaris/assets/index-379e1625.css">
 </head>
 
 <body>
@@ -22,35 +22,63 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto fs-1 font-ch-serif fw-bold textShadow-dark">
-        <li class="nav-item ms-10">
+        <li class="nav-item ms-lg-10">
           <a class="nav-link px-4 py-1 active" href="#">Home</a>
         </li>
-        <li class="nav-item ms-10">
+        <li class="nav-item ms-lg-10">
           <a class="nav-link px-4 py-1" href="#">Map</a>
         </li>
-        <li class="nav-item ms-10">
+        <li class="nav-item ms-lg-10">
           <a class="nav-link px-4 py-1" href="#">About</a>
         </li>
-        <li class="nav-item ms-10">
+        <li class="nav-item ms-lg-10">
           <a class="nav-link px-4 py-1" href="#">Q&A</a>
         </li>
-        <li class="nav-item ms-10">
+        <li class="nav-item ms-lg-10">
           <a class="nav-link px-4 py-1">Tool Box</a>
         </li>
       </ul>
     </div>
   </div>
-</nav>    <div class="procressbar d-none d-md-flex fixed-middle porisiton-right-0 me-12">
-  <div class="me-1 d-flex justify-content-end">
-    <img class="h-20" src="/polaris/assets/progressbar-light-7094e1a2.svg" alt="progressbar icon">
+</nav>    <!-- three color mode: none dark black -->
+<div class="procressbar d-none d-lg-flex fixed-middle position-right-0 me-8">
+  <div class="procressbar-icon me-1 d-flex justify-content-end position-relative">
+    <div class="procressbar-icon-img position-absolute"></div>
   </div>
-  <div class="procressbar-timeline me-3"></div>
-  <ul class="list-unstyled font-en-serif mb-0 d-flex flex-column justify-content-around">
-    <li><a class="link-light" href="#start">Start</a></li>
-    <li><a class="link-light" href="#info-01">Info</a></li>
-    <li><a class="link-light" href="#theme">Theme</a></li>
-    <li><a class="link-light" href="#tool">Tool</a></li>
-    <li><a class="link-light" href="#news">News</a></li>
+  <div class="procressbar-timeline me-3 d-flex flex-column justify-content-between align-items-end">
+    <div class="procressbar-timeline-long"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-long"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-long"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-long"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-long"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-short"></div>
+    <div class="procressbar-timeline-long"></div>
+  </div>
+  <ul class="procressbar-title list-unstyled font-en-serif mb-0 d-flex flex-column justify-content-around">
+    <li><a href="#start">Start</a></li>
+    <li><a href="#info">Info</a></li>
+    <li><a href="#theme">Theme</a></li>
+    <li><a href="#tool">Tool</a></li>
+    <li><a href="#news">News</a></li>
   </ul>
 </div>      <header id="start" class="index-header h-100vh position-relative">
         <!-- header grid items - images -->
@@ -176,92 +204,145 @@
         </div>
         <div class="index-header-radial position-absolute top-50 start-50 translate-middle"></div>
       </header>
-      <section id="info-01"
-        class="index-info h-100vh bg-noise-dark py-0 py-md-6 d-flex justify-content-center align-items-center">
+      <section id="info"
+        class="index-info-lg py-15 bg-noise-dark d-none d-lg-flex justify-content-center align-items-center position-relative">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-12 col-md-10 title-sm title-sm-light d-flex align-items-center mb-6 mb-xl-10">
+            <div class="col-12 col-md-10 title-sm title-sm-light d-flex align-items-center">
               <img class="me-4" src="/polaris/assets/title-sm-light-f8d462a6.svg" alt="title decoration">
               <h2 class="fs-h6 fs-xl-h5 text-white">Roadmap 有些什麼？</h2>
             </div>
           </div>
           <div class="row flex-column flex-md-row justify-content-center align-items-center">
-            <ul class="index-steps d-none d-md-flex list-unstyled col-1 fs-5 fs-xl-1 mb-0">
-              <li><a class="index-steps-number active" href="#info-01">1</a></li>
-              <li class="index-steps-line"></li>
-              <li><a class="index-steps-number" href="#info-02">2</a></li>
-              <li class="index-steps-line"></li>
-              <li><a class="index-steps-number" href="#info-03">3</a></li>
-            </ul>
-            <img class="col-12 col-md-6" src="/polaris/assets/index-info-01-74997687.svg" alt="羅列五大主題">
-            <div class="col-12 col-md-3 text-white d-flex flex-column align-items-center">
-              <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
-                <span class="font-en-hand d-inline-block">Point</span>
-                <br class="d-none d-md-block">
-                <span class="font-en-sans">01</span>
-              </h3>
-              <h4
-                class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
-                羅列五大主題</h4>
-              <p class="fs-4 fs-xl-3 fw-light mb-0">
-                依序統整五大主題，在地圖上查看主題與子項目，選定後可直接進入指定頁面，讓你不會迷失在茫茫頁面中。
-              </p>
+            <div class="col-12 col-md-7"></div>
+            <div class="col-12 col-md-3 text-white position-relative z-index-10">
+              <div class="index-info-01 h-70vh d-flex flex-column align-items-center justify-content-center">
+                <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
+                  <span class="font-en-hand d-inline-block">Point</span>
+                  <br class="d-none d-md-block">
+                  <span class="font-en-sans">01</span>
+                </h3>
+                <h4
+                  class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
+                  羅列五大主題</h4>
+                <p class="fs-4 fs-xl-3 fw-light mb-0">
+                  依序統整五大主題，在地圖上查看主題與子項目，選定後可直接進入指定頁面，讓你不會迷失在茫茫頁面中。
+                </p>
+              </div>
+              <div class="index-info-02 h-70vh d-flex flex-column align-items-center justify-content-center">
+                <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
+                  <span class="font-en-hand d-inline-block">Point</span>
+                  <br class="d-none d-md-block">
+                  <span class="font-en-sans">02</span>
+                </h3>
+                <h4
+                  class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
+                  如影隨形伴隨你</h4>
+                <p class="fs-4 fs-xl-3 fw-light mb-0">
+                  地圖按鈕將會常駐於導覽列，默默的守護不打擾你的旅程，當你需要時絕對不會找不他。
+                </p>
+              </div>
+              <div class="index-info-03 h-70vh d-flex flex-column align-items-center justify-content-center">
+                <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
+                  <span class="font-en-hand d-inline-block">Point</span>
+                  <br class="d-none d-md-block">
+                  <span class="font-en-sans">03</span>
+                </h3>
+                <h4
+                  class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
+                  釋放腦中記憶體</h4>
+                <p class="fs-4 fs-xl-3 fw-light mb-0">
+                  讓我們幫你記下你的學習旅程！可在學習過的上勾選完成，紀錄學習進度，一目了然且不必額外紀錄學習位置。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="index-info-imgContainer position-absolute top-0 position-y-0">
+            <div class="container">
+              <div class="row align-items-center justify-content-center h-80vh">
+                <div class="col-7">
+                  <div class="row align-items-center">
+                    <ul class="index-steps d-none d-md-flex list-unstyled col-2 fs-5 fs-xl-1 mb-0">
+                      <li><a class="index-steps-number active" href="#index-info-01">1</a></li>
+                      <li class="index-steps-line index-line-steps-2"></li>
+                      <li><a class="index-steps-number index-steps-2" href="#index-info-02">2</a></li>
+                      <li class="index-steps-line index-steps-3"></li>
+                      <li><a class="index-steps-number index-line-steps-3" href="#index-info-03">3</a></li>
+                    </ul>
+                    <img class="index-info-img col-12 col-md-10" src="../assets/images/index/index-index-info-01.svg"
+                      alt="羅列五大主題">
+                  </div>
+                </div>
+                <div class="col-3"></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="info-02"
-        class="index-info h-100vh bg-noise-dark py-0 py-md-6 d-flex justify-content-center align-items-center">
-        <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <ul class="index-steps d-none d-md-flex list-unstyled col-1 fs-1 fs-xl-1 mb-0">
-              <li><a class="index-steps-number active" href="#info-01">1</a></li>
-              <li class="index-steps-line active"></li>
-              <li><a class="index-steps-number active" href="#info-02">2</a></li>
-              <li class="index-steps-line"></li>
-              <li><a class="index-steps-number" href="#info-03">3</a></li>
-            </ul>
-            <img class="col-12 col-md-6" src="/polaris/assets/index-info-02-ba4a5f4c.svg" alt="如影隨形伴隨你">
-            <div class="c0l-12 col-md-3 text-white d-flex flex-column align-items-center">
-              <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
-                <span class="font-en-hand d-inline-block">Point</span>
-                <br class="d-none d-md-block">
-                <span class="font-en-sans">02</span>
-              </h3>
-              <h4
-                class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
-                如影隨形伴隨你</h4>
-              <p class="fs-4 fs-xl-3 fw-light mb-0">
-                地圖按鈕將會常駐於導覽列，默默的守護不打擾你的旅程，當你需要時絕對不會找不他。
-              </p>
+      <section class="index-info-sm d-block d-lg-none bg-noise-dark">
+        <div id="info-01" class="index-info py-0 py-md-10 d-flex justify-content-center align-items-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-10 title-sm title-sm-light d-flex align-items-center mb-6 mb-xl-10">
+                <img class="me-4" src="/polaris/assets/title-sm-light-f8d462a6.svg" alt="title decoration">
+                <h2 class="fs-h6 fs-xl-h5 text-white">Roadmap 有些什麼？</h2>
+              </div>
+            </div>
+            <div class="row flex-column flex-md-row justify-content-center align-items-center">
+              <img class="col-12 col-md-6" src="/polaris/assets/index-info-01-74997687.svg" alt="羅列五大主題">
+              <div class="col-12 col-md-4 text-white d-flex flex-column align-items-center">
+                <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
+                  <span class="font-en-hand d-inline-block">Point</span>
+                  <br class="d-none d-md-block">
+                  <span class="font-en-sans">01</span>
+                </h3>
+                <h4
+                  class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
+                  羅列五大主題</h4>
+                <p class="fs-4 fs-xl-3 fw-light mb-0">
+                  依序統整五大主題，在地圖上查看主題與子項目，選定後可直接進入指定頁面，讓你不會迷失在茫茫頁面中。
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <section id="info-03"
-        class="index-info h-100vh bg-noise-dark py-0 py-md-6 d-flex justify-content-center align-items-center">
-        <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <ul class="index-steps d-none d-md-flex list-unstyled col-1 fs-2 fs-xl-1 mb-0">
-              <li><a class="index-steps-number active" href="#info-01">1</a></li>
-              <li class="index-steps-line active"></li>
-              <li><a class="index-steps-number active" href="#info-02">2</a></li>
-              <li class="index-steps-line active"></li>
-              <li><a class="index-steps-number active" href="#info-03">3</a></li>
-            </ul>
-            <img class="col-12 col-md-6" src="/polaris/assets/index-info-03-d631dbf4.svg" alt="釋放腦中記憶體">
-            <div class="c0l-12 col-md-3 text-white d-flex flex-column align-items-center">
-              <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
-                <span class="font-en-hand d-inline-block">Point</span>
-                <br class="d-none d-md-block">
-                <span class="font-en-sans">03</span>
-              </h3>
-              <h4
-                class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
-                釋放腦中記憶體</h4>
-              <p class="fs-4 fs-xl-3 fw-light mb-0">
-                讓我們幫你記下你的學習旅程！可在學習過的上勾選完成，紀錄學習進度，一目了然且不必額外紀錄學習位置。
-              </p>
+        <div id="info-02" class="index-info py-0 py-md-10 d-flex justify-content-center align-items-center">
+          <div class="container">
+            <div class="row flex-md-row-reverse justify-content-center align-items-center">
+              <img class="col-12 col-md-6" src="/polaris/assets/index-info-02-ba4a5f4c.svg" alt="如影隨形伴隨你">
+              <div class="c0l-12 col-md-4 text-white d-flex flex-column align-items-center">
+                <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
+                  <span class="font-en-hand d-inline-block">Point</span>
+                  <br class="d-none d-md-block">
+                  <span class="font-en-sans">02</span>
+                </h3>
+                <h4
+                  class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
+                  如影隨形伴隨你</h4>
+                <p class="fs-4 fs-xl-3 fw-light mb-0">
+                  地圖按鈕將會常駐於導覽列，默默的守護不打擾你的旅程，當你需要時絕對不會找不他。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="info-03" class="index-info py-0 py-md-10 d-flex justify-content-center align-items-center">
+          <div class="container">
+            <div class="row justify-content-center align-items-center">
+              <img class="col-12 col-md-6" src="/polaris/assets/index-info-03-d631dbf4.svg" alt="釋放腦中記憶體">
+              <div class="c0l-12 col-md-4 text-white d-flex flex-column align-items-center">
+                <h3 class="fs-h3 fs-xl-h2 lh-1 text-center mb-4 mb-md-8">
+                  <span class="font-en-hand d-inline-block">Point</span>
+                  <br class="d-none d-md-block">
+                  <span class="font-en-sans">03</span>
+                </h3>
+                <h4
+                  class="fs-2 fs-xl-1 text-center w-fit pb-1 mb-4 mb-md-8 mb-xl-12 border-bottom border-primary border-2">
+                  釋放腦中記憶體</h4>
+                <p class="fs-4 fs-xl-3 fw-light mb-0">
+                  讓我們幫你記下你的學習旅程！可在學習過的上勾選完成，紀錄學習進度，一目了然且不必額外紀錄學習位置。
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -310,13 +391,16 @@
         </section>
         <section class="index-scrollText overflow-hidden fs-h5 fs-xl-h3 font-en-sans fw-medium">
           <p class="index-scrollText-item text-secondary-300 text-nowrap mb-0">
-            RoadMap of Five Themes &nbsp;&nbsp; RoadMap of Five Themes &nbsp;&nbsp; RoadMap of Five Themes
+            RoadMap of Five Themes &nbsp;&nbsp; RoadMap of Five Themes &nbsp;&nbsp; RoadMap of Five Themes &nbsp;&nbsp;
+            RoadMap of Five Themes &nbsp;&nbsp; RoadMap of Five Themes &nbsp;&nbsp; RoadMap of Five Themes &nbsp;&nbsp;
+            RoadMap of Five Themes
           </p>
           <p class="index-scrollText-item text-secondary text-nowrap mb-0">
             Frontend RoadMap &nbsp;&nbsp; Frontend RoadMap &nbsp;&nbsp; Frontend RoadMap
           </p>
           <p class="index-scrollText-item text-primary text-nowrap mb-0">
             Polaris with you &nbsp;&nbsp; Polaris with you &nbsp;&nbsp; Polaris with you &nbsp;&nbsp; Polaris with you
+            &nbsp;&nbsp; Polaris with you &nbsp;&nbsp; Polaris with you &nbsp;&nbsp; Polaris with you
             &nbsp;&nbsp; Polaris with you
           </p>
         </section>
@@ -432,6 +516,7 @@
     </div>
   </div>
 </footer>        
+        
 </body>
 
 </html>
