@@ -1,10 +1,83 @@
 .procressbar {
   z-index: 5;
-  
+
+  &-title {
+    color: $white;
+  }
+
+  &-icon {
+    width: 30px;
+
+    &-img {
+      display: inline-block;
+      height: 20%;
+      width: 100%;
+      background: url("../images/icon/progressbar-light.svg") center right no-repeat;
+      background-size: contain;
+    }
+  }
+
   &-timeline {
     height: 45vh;
-    width: 10px;
-    border: 2px solid $primary;
-    border-left: none;
+    width: 15px;
+    border-right: 2px solid $primary;
+
+    &-short {
+      width: 50%;
+      height: 1px;
+      background-color: $primary;
+    }
+
+    &-long {
+      width: 100%;
+      height: 2px;
+      background-color: $primary;
+    }
+  }
+}
+
+.procressbar.dark {
+  .procressbar-icon-img {
+    display: inline-block;
+    height: 20%;
+    width: 100%;
+    background: url("../images/icon/progressbar-dark.svg") center right no-repeat;
+    background-size: contain;
+  }
+
+  .procressbar-title a {
+    color: $primary-700;
+  }
+
+  .procressbar-timeline {
+    border-color: $secondary-500;
+
+    &-short,
+    &-long {
+      background-color: $secondary-500;
+    }
+  }
+}
+
+.procressbar.black {
+  .procressbar-icon-img {
+    display: inline-block;
+    height: 20%;
+    width: 100%;
+    background: url("../images/icon/progressbar-black.svg") center right no-repeat;
+    background-size: contain;
+  }
+
+  .procressbar-title a {
+    color: $gray-900;
+  }
+
+  .procressbar-timeline {
+    border-color: $danger-500;
+
+    &-short,
+    &-long {
+      background-color: $danger-500;
+    }
   }
 }
