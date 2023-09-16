@@ -19,6 +19,8 @@ const themeTop = document.querySelector("#theme").offsetTop;
 const themeHeight = document.querySelector("#theme").offsetHeight;
 const toolTop = document.querySelector("#tool").offsetTop;
 const toolHeight = document.querySelector("#tool").offsetHeight;
+const navbar = document.querySelector(".navbar");
+const navbarNav = document.querySelector(".navbar-nav");
 
 addEventListener("scroll", (e) => {
   // procressbar status
@@ -66,7 +68,17 @@ addEventListener("scroll", (e) => {
     procressbar.classList.add("black");
     procressbar.classList.remove("light");
     procressbar.classList.remove("dark");
+  }
 
+  // nav status
+  if ( window.scrollY <= infoTop + infoHeight) {
+    navbar.classList.add("navbar-dark");
+    navbar.classList.remove("navbar-light");
+    navbarNav.classList.add("textShadow-lg-dark");
+  } else {
+    navbar.classList.add("navbar-light");
+    navbar.classList.remove("navbar-dark");
+    navbarNav.classList.remove("textShadow-lg-dark");
   }
 
   // info img fixed
@@ -88,7 +100,7 @@ addEventListener("scroll", (e) => {
     window.scrollY >= infoTop &&
     window.scrollY <= infoTop + infoFirstHeight * 0.9
   ) {
-    img.src = "/assets/images/index/index-info-01.svg";
+    img.src = "https://raw.githubusercontent.com/minnnn7716/polaris/66033047c094d7790e7c52b4b47192786486c19f/assets/images/index/index-info-01.svg";
     img.alt = "羅列五大主題";
     step2.classList.remove("active");
     step2Line.classList.remove("active");
@@ -98,7 +110,7 @@ addEventListener("scroll", (e) => {
     window.scrollY > infoTop + infoFirstHeight * 0.9 &&
     window.scrollY <= infoTop + infoSecondTop + infoSecondHeight * 0.9
   ) {
-    img.src = "/assets/images/index/index-info-02.svg";
+    img.src = "https://raw.githubusercontent.com/minnnn7716/polaris/66033047c094d7790e7c52b4b47192786486c19f/assets/images/index/index-info-02.svg";
     img.alt = "如影隨形伴隨你";
     step2.classList.add("active");
     step2Line.classList.add("active");
@@ -108,7 +120,7 @@ addEventListener("scroll", (e) => {
     window.scrollY >
     infoTop + infoSecondTop + infoSecondHeight * 0.9
   ) {
-    img.src = "/assets/images/index/index-info-03.svg";
+    img.src = "https://raw.githubusercontent.com/minnnn7716/polaris/66033047c094d7790e7c52b4b47192786486c19f/assets/images/index/index-info-03.svg";
     img.alt = "釋放腦中記憶體";
     step3.classList.add("active");
     step3Line.classList.add("active");

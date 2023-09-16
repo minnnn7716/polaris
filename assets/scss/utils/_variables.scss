@@ -1392,6 +1392,14 @@ $navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3
 $navbar-light-toggler-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), 0.15) !default;
 $navbar-light-brand-color: $navbar-light-active-color !default;
 $navbar-light-brand-hover-color: $navbar-light-active-color !default;
+
+// -custom-navbar
+$navbar-light-color: rgba($secondary, 0.65);
+$navbar-light-hover-color: rgba($secondary, 0.8);
+$navbar-light-active-color: $secondary;
+$navbar-light-disabled-color: rgba($secondary, 0.3);
+$navbar-light-brand-color: $navbar-light-active-color;
+$navbar-light-brand-hover-color: $navbar-light-active-color;
 // scss-docs-end navbar-variables
 
 // scss-docs-start navbar-dark-variables

@@ -69,8 +69,10 @@
 }
 
 // ------ shadow ------ //
-.textShadow-dark {
-  text-shadow: 5px 5px 12px $customBlue-900;
+.textShadow-lg-dark {
+  @include media-breakpoint-up(lg) {
+    text-shadow: 5px 5px 12px $customBlue-900;
+  }
 }
 
 .boxShadow-solid-primary {
@@ -89,6 +91,18 @@
 
   &-secondary {
     background-image: url(../images/background/bg-noise-secondary.png);
+  }
+}
+
+.bg-gray-blur {
+  background-color: rgba($white, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.bg-lg-transparent {
+  @include media-breakpoint-up(lg) {
+    background-color: transparent;
+    backdrop-filter: none;
   }
 }
 
@@ -143,6 +157,16 @@
   }
 }
 
+.h-lg-auto {
+  @include media-breakpoint-up(xl) {
+    height: auto;
+  }
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
 // ------ position ------ //
 .fixed-middle {
   position: fixed;
@@ -161,8 +185,13 @@
 .z-index-5 {
   z-index: 5;
 }
+
 .z-index-10 {
   z-index: 10;
+}
+
+.z-index-max {
+  z-index: 5000;
 }
 
 .position-y-0 {
@@ -240,4 +269,9 @@
 
 .circle-10 {
   @include circle(0.5vw);
+}
+
+// ------ transition ------ //
+.transition-all {
+  transition: all ease 0.5s;
 }
