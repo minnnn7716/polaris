@@ -88,7 +88,7 @@ addEventListener("scroll", (e) => {
     window.scrollY >= infoTop &&
     window.scrollY <= infoTop + infoFirstHeight * 0.9
   ) {
-    img.src = "../assets/images/index/index-info-01.svg";
+    img.src = "/assets/images/index/index-info-01.svg";
     img.alt = "羅列五大主題";
     step2.classList.remove("active");
     step2Line.classList.remove("active");
@@ -98,7 +98,7 @@ addEventListener("scroll", (e) => {
     window.scrollY > infoTop + infoFirstHeight * 0.9 &&
     window.scrollY <= infoTop + infoSecondTop + infoSecondHeight * 0.9
   ) {
-    img.src = "../assets/images/index/index-info-02.svg";
+    img.src = "/assets/images/index/index-info-02.svg";
     img.alt = "如影隨形伴隨你";
     step2.classList.add("active");
     step2Line.classList.add("active");
@@ -108,7 +108,7 @@ addEventListener("scroll", (e) => {
     window.scrollY >
     infoTop + infoSecondTop + infoSecondHeight * 0.9
   ) {
-    img.src = "../assets/images/index/index-info-03.svg";
+    img.src = "/assets/images/index/index-info-03.svg";
     img.alt = "釋放腦中記憶體";
     step3.classList.add("active");
     step3Line.classList.add("active");
